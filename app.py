@@ -6,8 +6,7 @@ st.write("Autor: Daniel Garcia | ISIL")
 st.write("Interactúa con la barra deslizante para explorar los hitos más importantes en la historia de la IA.") 
  
 # URLs de imágenes en GitHub 
-base_url = 
-"https://raw.githubusercontent.com/danielgarcp-ux/Timeline_S1/main/timeline_images/" 
+base_url = "https://raw.githubusercontent.com/danielgarcp-ux/Timeline_S1/main/timeline_images/" 
  
 imagenes = { 
     1: base_url + "img1.png", 
