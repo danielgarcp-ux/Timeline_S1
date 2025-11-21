@@ -18,7 +18,7 @@ imagenes = {
 opcion = st.slider( 
     "Selecciona un punto del timeline", 
     min_value=1, 
-    max_value=5, 
+    max_value=3, 
     value=1, 
     step=1 
 ) 
