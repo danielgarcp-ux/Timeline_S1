@@ -27,11 +27,8 @@ opcion = st.slider(
 # Mostrar imagen según slider 
 st.image(imagenes[opcion], use_container_width=True)  
 if opcion == 1: 
-  st.info("      **1950 – Test de Turing** | Alan Turing propone un criterio para evaluar la inteligencia 
-de una máquina.") 
+  st.info("      **1950 – Test de Turing** | Alan Turing propone un criterio para evaluar la inteligencia de una máquina.") 
 if opcion == 2: 
-  st.info("       **1956 – Nace el campo de la IA en Dartmouth** | John McCarthy acuña el término 
-*Inteligencia Artificial*.") 
+  st.info("       **1956 – Nace el campo de la IA en Dartmouth** | John McCarthy acuña el término *Inteligencia Artificial*.") 
 if opcion == 3: 
-  st.info("      **1997 – Deep Blue vence a Garry Kasparov** | Primer triunfo de una máquina sobre 
-un campeón mundial de ajedrez.") 
+  st.info("      **1997 – Deep Blue vence a Garry Kasparov** | Primer triunfo de una máquina sobre un campeón mundial de ajedrez.") 
