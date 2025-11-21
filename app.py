@@ -1,28 +1,38 @@
-import streamlit as st
-
-st.title("Timeline con Slider – Imágenes desde GitHub")
-
-# URL base de las imágenes en GitHub
-BASE_URL = "https://raw.githubusercontent.com/danielgarcp-ux/Timeline_S1/main/timeline_images/"
-
-# Nombres exactos de las imágenes
-imagenes = [
-    "img1.png",
-    "img2.png",
-    "img3.png"
-]
-
-# Construye URLs completas
-img_urls = [BASE_URL + img for img in imagenes]
-
-# Slider con 3 posiciones
-pos = st.slider(
-    "Selecciona un punto de la línea de tiempo",
-    min_value=0,
-    max_value=2,
-    value=0,
-    step=1
-)
-
-# Mostrar imagen correspondiente
-st.image(img_urls[pos], use_column_width=True)
+import streamlit as st 
+ 
+st.set_page_config(page_title="Sesion 1 | ISIL", layout="centered") 
+st.title("Desarrollo de la IA | Timeline") 
+st.write("Autor: Daniel Garcia | ISIL") 
+st.write("Interactúa con la barra deslizante para explorar los hitos más importantes en la historia 
+de la IA.") 
+ 
+# URLs de imágenes en GitHub 
+base_url = 
+"https://raw.githubusercontent.com/danielgarcp-ux/Timeline_S1/main/timeline_images/" 
+ 
+imagenes = { 
+    1: base_url + "img1.png", 
+    2: base_url + "img2.png", 
+    3: base_url + "img3.png", 
+} 
+ 
+# Slider 
+opcion = st.slider( 
+    "Selecciona un punto del timeline", 
+    min_value=1, 
+    max_value=5, 
+    value=1, 
+    step=1 
+) 
+ 
+# Mostrar imagen según slider 
+st.image(imagenes[opcion], use_container_width=True)  
+if opcion == 1: 
+  st.info("      **1950 – Test de Turing** | Alan Turing propone un criterio para evaluar la inteligencia 
+de una máquina.") 
+if opcion == 2: 
+  st.info("       **1956 – Nace el campo de la IA en Dartmouth** | John McCarthy acuña el término 
+*Inteligencia Artificial*.") 
+if opcion == 3: 
+  st.info("      **1997 – Deep Blue vence a Garry Kasparov** | Primer triunfo de una máquina sobre 
+un campeón mundial de ajedrez.") 
