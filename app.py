@@ -1,24 +1,28 @@
 import streamlit as st
 
-st.set_page_config(page_title="Timeline", layout="centered")
+st.title("Timeline con Slider – Imágenes desde GitHub")
 
-st.title("Timeline con Slider e Imágenes desde GitHub")
-
-# --- URL base del repositorio ---
+# URL base de las imágenes en GitHub
 BASE_URL = "https://raw.githubusercontent.com/danielgarcp-ux/Timeline_S1/main/timeline_images/"
 
-# Lista de nombres de imágenes (asegúrate que coincidan con los nombres exactos en GitHub)
-images = [
+# Nombres exactos de las imágenes
+imagenes = [
     "img1.png",
     "img2.png",
-    "img3.png",
+    "img3.png"
 ]
 
-# Slider con posiciones del 1 al 3
-pos = st.slider("Selecciona un punto del timeline", 1, 3, 1)
+# Construye URLs completas
+img_urls = [BASE_URL + img for img in imagenes]
+
+# Slider con 3 posiciones
+pos = st.slider(
+    "Selecciona un punto de la línea de tiempo",
+    min_value=0,
+    max_value=2,
+    value=0,
+    step=1
+)
 
 # Mostrar imagen correspondiente
-img_url = BASE_URL + images[pos - 1]
-st.image(img_url, use_column_width=True)
-
-st.write(f"Imagen mostrada: {images[pos - 1]}")
+st.image(img_urls[pos], use_column_width=True)
