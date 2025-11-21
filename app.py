@@ -5,7 +5,7 @@ st.set_page_config(page_title="Timeline", layout="centered")
 st.title("Timeline con Slider e Imágenes desde GitHub")
 
 # --- URL base del repositorio ---
-BASE_URL = "https://github.com/danielgarcp-ux/Timeline_S1/new/main/timeline_images/"
+BASE_URL = "https://raw.githubusercontent.com/danielgarcp-ux/Timeline_S1/main/timeline_images/"
 
 # Lista de nombres de imágenes (asegúrate que coincidan con los nombres exactos en GitHub)
 images = [
