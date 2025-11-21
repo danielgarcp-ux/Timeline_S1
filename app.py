@@ -9,9 +9,9 @@ BASE_URL = "https://github.com/danielgarcp-ux/Timeline_S1/new/main/timeline_imag
 
 # Lista de nombres de imágenes (asegúrate que coincidan con los nombres exactos en GitHub)
 images = [
-    "img1.jpg",
-    "img2.jpg",
-    "img3.jpg",
+    "img1.png",
+    "img2.png",
+    "img3.png",
 ]
 
 # Slider con posiciones del 1 al 3
