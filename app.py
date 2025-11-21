@@ -12,12 +12,10 @@ images = [
     "img1.jpg",
     "img2.jpg",
     "img3.jpg",
-    "img4.jpg",
-    "img5.jpg"
 ]
 
-# Slider con posiciones del 1 al 5
-pos = st.slider("Selecciona un punto del timeline", 1, 5, 1)
+# Slider con posiciones del 1 al 3
+pos = st.slider("Selecciona un punto del timeline", 1, 3, 1)
 
 # Mostrar imagen correspondiente
 img_url = BASE_URL + images[pos - 1]
